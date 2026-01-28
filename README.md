@@ -65,6 +65,6 @@ canerin-todo/
 └── README.md          - Diese Datei
 ```
 
-## B Design
+## DB Design
 
 ![1769601893823](image/README/1769601893823.png)
