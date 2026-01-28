@@ -37,7 +37,7 @@ mysql -u root -p < database.sql
 Öffnen Sie die Datei `config.php` und passen Sie bei Bedarf die Datenbankzugangsdaten an:
 
 ```php
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost');   // oder 'localhost:3306' oder dein Port
 define('DB_NAME', 'canerin_todo');
 define('DB_USER', 'root');        // Ihr MySQL-Benutzername
 define('DB_PASS', '');            // Ihr MySQL-Passwort
