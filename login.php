@@ -98,7 +98,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="link">
             Noch kein Konto? <a href="register.php">Jetzt registrieren</a>
         </div>
+        <div class="container"> 
+            <span>&copy <a href="">caneroktay.com</a> All Rights Received.</span>
     </div>
+    </div>
+
+    
+
     <script>        
         function chngavatar(imagePath) {
             document.getElementById('avatar').src = imagePath;
