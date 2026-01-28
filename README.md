@@ -1,3 +1,7 @@
+# Diese mit PHP entwickelte Web-App dient zu Bildungszwecken!
+
+---
+
 # CNR Todo - Installationsanleitung
 
 ## Voraussetzungen
