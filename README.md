@@ -64,3 +64,7 @@ canerin-todo/
 ├── database.sql       - Datenbank-Setup-Script
 └── README.md          - Diese Datei
 ```
+
+## B Design
+
+![1769601893823](image/README/1769601893823.png)
