@@ -21,7 +21,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #668dea 0%, #f00 100%);
+    background: linear-gradient(180deg, #668dea 0%, #f00 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -562,4 +562,10 @@ body {
     .btn-icon {
         flex: 1;
     }
+
+}
+
+#avatar {
+  transition: opacity 0.3s ease-in-out;
+ 
 }

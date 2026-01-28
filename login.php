@@ -51,7 +51,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if ($fehler): ?>
             <div class="alert alert-error"><?php echo $fehler; ?></div>
         <?php endif; ?>
+
+        <!-- Avatar -->
+        <div class="login-container" style="text-align: center;">
+
+            <div class="avatar-box">
+                <img id="avatar" src="image/normal.png" alt="Avatar" width="200">
+            </div>
         
+        </div>
+        <!-- Avatar ends -->
+        
+
         <form method="POST" action="">
             <div class="form-group">
                 <label for="benutzername">Benutzername oder E-Mail</label>
@@ -59,10 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="text" 
                     id="benutzername" 
                     name="benutzername" 
+                    onfocus="chngavatar('image/unten.png')" 
+                    onblur="chngavatar('image/normal.png')"
                     value="<?php echo htmlspecialchars($_POST['benutzername'] ?? ''); ?>"
                     required
                     placeholder="Ihr Benutzername oder E-Mail"
-                    autofocus
+                   
                 >
             </div>
             
@@ -72,6 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="password" 
                     id="passwort" 
                     name="passwort" 
+                    onfocus="chngavatar('image/passwort.png')" 
+                    onblur="chngavatar('image/normal.png')"
                     required
                     placeholder="Ihr Passwort"
                 >
@@ -84,5 +99,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             Noch kein Konto? <a href="register.php">Jetzt registrieren</a>
         </div>
     </div>
+    <script>        
+        function chngavatar(imagePath) {
+            document.getElementById('avatar').src = imagePath;
+            }
+
+        
+        window.addEventListener('load', function() {
+            const errorAlert = document.querySelector('.alert.alert-error');
+            if (errorAlert) {
+                chngavatar('image/fehler.png');
+            }
+        });
+
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            chngavatar('image/fehler.png');
+            
+            setTimeout(() => {
+                chngavatar('image/normal.png');
+            }, 3000);
+            });
+
+    </script>
+
 </body>
 </html>
