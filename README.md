@@ -1,6 +1,10 @@
-# Diese mit PHP entwickelte Web-App dient zu Bildungszwecken!
-
 ![1769613418388](image/README/CNRtodo_slayt.png)
+
+Diese Webanwendung ist eine funktionale „To-Do-Liste“, die grundlegende **CRUD-Operationen** (Anlegen, Lesen, Aktualisieren, Löschen) umfasst.
+
+* **Backend:** Die Anwendung wurde serverseitig mit **PHP** entwickelt.
+* **Datenmanagement:** Benutzerdaten und Aufgabenlisten sind auf einer **MySQL-Datenbank** optimiert.
+* **Umfang:** Diese Arbeit wurde als **beispielhaftes Projekt** erstellt und verdeutlicht die Logik von Datenbankmanagement sowie dynamischer Content-Erstellung.
 
 #### DEMO: [ https://cnr-todo.infinityfree.me/login.php](https://cnr-todo.infinityfree.me/login.php)
 
