@@ -98,26 +98,7 @@ $todos = $stmt->fetchAll();
         <div class="content">
             <h2 style="margin-bottom: 20px; color: var(--primär);">Meine Aufgaben</h2>
             
-            <!-- Filter -->
-            <!--<div class="todo-filters">
-                <button class="filter-btn <?php #echo $filter === 'alle' ? 'active' : ''; ?>" 
-                        onclick="window.location.href='dashboard.php?filter=alle'">
-                    Alle
-                </button>
-                <button class="filter-btn <?php #echo $filter === 'offen' ? 'active' : ''; ?>" 
-                        onclick="window.location.href='dashboard.php?filter=offen'">
-                    Offen
-                </button>
-                <button class="filter-btn <?php #echo $filter === 'erledigt' ? 'active' : ''; ?>" 
-                        onclick="window.location.href='dashboard.php?filter=erledigt'">
-                    Erledigt
-                </button>
-                <button class="filter-btn <?php #echo $filter === 'hoch' ? 'active' : ''; ?>" 
-                        onclick="window.location.href='dashboard.php?filter=hoch'">
-                    Hohe Priorität
-                </button>
-            </div>
-            -->
+            
             <!-- Todos Liste -->
             <div class="todos-list">
                 <?php if (empty($todos)): ?>

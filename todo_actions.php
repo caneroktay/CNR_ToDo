@@ -1,7 +1,6 @@
 <?php
 require_once 'config.php';
 
-// Nur für angemeldete Benutzer
 weiterleitenWennNichtAngemeldet();
 
 $benutzer_id = $_SESSION['benutzer_id'];
