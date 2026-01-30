@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'core/config.php';
 
 weiterleitenWennAngemeldet();
 
@@ -54,13 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrierung - CNR Todo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" href="./img/todo_icon.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./img/todo_icon.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="./img/todo_icon.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="./img/todo_icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./img/todo_icon.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./img/todo_icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="assets/img/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="assets/img/todo_icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/todo_icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/todo_icon.png">
 </head>
 <body>
     <div class="container">

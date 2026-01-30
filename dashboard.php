@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'core/config.php';
 
 // Nur für angemeldete Benutzer
 weiterleitenWennNichtAngemeldet();
@@ -52,13 +52,13 @@ $todos = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - CNR Todo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" href="./img/todo_icon.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./img/todo_icon.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="./img/todo_icon.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="./img/todo_icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./img/todo_icon.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./img/todo_icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="assets/img/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="assets/img/todo_icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/todo_icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/todo_icon.png">
 </head>
 <body>
     <div class="dashboard-container">
@@ -201,74 +201,6 @@ $todos = $stmt->fetchAll();
             </form>
         </div>
     </div>
-    
-    <script>
-        function oeffneNeueAufgabeModal() {
-            document.getElementById('modalTitel').textContent = 'Neue Aufgabe';
-            document.getElementById('formAktion').value = 'erstellen';
-            document.getElementById('formId').value = '';
-            document.getElementById('aufgabeForm').reset();
-            document.getElementById('aufgabeModal').classList.add('active');
-        }
-        
-        function schliesseModal() {
-            document.getElementById('aufgabeModal').classList.remove('active');
-        }
-        
-        function erledigeAufgabe(id) {
-            if (confirm('Möchten Sie diese Aufgabe als erledigt markieren?')) {
-                window.location.href = 'todo_actions.php?aktion=erledigen&id=' + id;
-            }
-        }
-        
-        function oeffneAufgabe(id) {
-            if (confirm('Möchten Sie diese Aufgabe wieder öffnen?')) {
-                window.location.href = 'todo_actions.php?aktion=oeffnen&id=' + id;
-            }
-        }
-        
-        function loescheAufgabe(id) {
-            if (confirm('Möchten Sie diese Aufgabe wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.')) {
-                window.location.href = 'todo_actions.php?aktion=loeschen&id=' + id;
-            }
-        }
-        
-        function bearbeiteAufgabe(id) {
-            fetch('todo_actions.php?aktion=abrufen&id=' + id)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.erfolg) {
-                        document.getElementById('modalTitel').textContent = 'Aufgabe bearbeiten';
-                        document.getElementById('formAktion').value = 'bearbeiten';
-                        document.getElementById('formId').value = data.todo.id;
-                        document.getElementById('titel').value = data.todo.titel;
-                        document.getElementById('beschreibung').value = data.todo.beschreibung || '';
-                        document.getElementById('prioritaet').value = data.todo.prioritaet;
-                        document.getElementById('faelligkeit').value = data.todo.faelligkeit || '';
-                        document.getElementById('aufgabeModal').classList.add('active');
-                    } else {
-                        alert('Fehler beim Laden der Aufgabe.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Fehler:', error);
-                    alert('Ein Fehler ist aufgetreten.');
-                });
-        }
-        
-        // Modal schließen bei Klick außerhalb
-        document.getElementById('aufgabeModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                schliesseModal();
-            }
-        });
-        
-        // Modal schließen mit ESC-Taste
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                schliesseModal();
-            }
-        });
-    </script>
 </body>
+<script src="js/main.js"></script>
 </html>

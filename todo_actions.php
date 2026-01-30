@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'core/config.php';
 
 weiterleitenWennNichtAngemeldet();
 
@@ -104,4 +104,3 @@ try {
     header('Location: dashboard.php?fehler=' . urlencode($e->getMessage()));
     exit();
 }
-?>
