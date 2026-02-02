@@ -80,7 +80,6 @@ CNR_ToDo/
 │   └── style.css              - Alle Styles (responsive Design)
 ├── js/
 │   └── main.js                - JavaScript Funktionen
-├── image/                     - Bilder für die Anwendung
 ├── assets/                    - Assets und Ressourcen
 │   └── img/                   - Bilder für README und Dokumentation
 └── .git/                      - Git-Repository
