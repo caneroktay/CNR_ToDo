@@ -64,17 +64,26 @@ define('DB_PASS', '');            // Ihr MySQL-Passwort
 ## Projektstruktur
 
 ```
-canerin-todo/
-├── index.php           - Startseite (leitet zu login.php weiter)
-├── login.php          - Anmeldeseite
-├── register.php       - Registrierungsseite
-├── dashboard.php      - Hauptseite mit Todo-Liste
-├── logout.php         - Abmelden
-├── config.php         - Datenbankkonfiguration und Hilfsfunktionen
-├── todo_actions.php   - CRUD-Operationen für Todos
-├── style.css          - Alle Styles (responsive Design)
-├── database.sql       - Datenbank-Setup-Script
-└── README.md          - Diese Datei
+CNR_ToDo/
+├── index.php                  - Startseite (leitet zu login.php weiter)
+├── login.php                  - Anmeldeseite
+├── register.php               - Registrierungsseite
+├── dashboard.php              - Hauptseite mit Todo-Liste
+├── logout.php                 - Abmelden
+├── todo_actions.php           - CRUD-Operationen für Todos
+├── license.txt                - Lizenzdatei
+├── README.md                  - Diese Datei
+├── core/
+│   ├── config.php             - Datenbankkonfiguration und Hilfsfunktionen
+│   └── database.sql           - Datenbank-Setup-Script
+├── css/
+│   └── style.css              - Alle Styles (responsive Design)
+├── js/
+│   └── main.js                - JavaScript Funktionen
+├── image/                     - Bilder für die Anwendung
+├── assets/                    - Assets und Ressourcen
+│   └── img/                   - Bilder für README und Dokumentation
+└── .git/                      - Git-Repository
 ```
 
 ## DB Design
