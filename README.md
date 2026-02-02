@@ -1,4 +1,4 @@
-![1769613418388](image/README/CNRtodo_slayt.png)
+![1769613418388](assets/img/README/CNRtodo_slayt.png)
 
 Diese Webanwendung ist eine funktionale „To-Do-Liste“, die grundlegende **CRUD-Operationen** (Anlegen, Lesen, Aktualisieren, Löschen) umfasst.
 
@@ -79,4 +79,4 @@ canerin-todo/
 
 ## DB Design
 
-![1769601893823](image/README/1769601893823.png)
+![1769601893823](assets/img/README/1769601893823.png)
