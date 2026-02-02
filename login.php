@@ -38,6 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#668dea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Anmeldung - CNR Todo</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" href="assets/img/todo_icon.png">
@@ -48,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/todo_icon.png">
 </head>
 <body>
+    <div class="ios-status-bar"></div>
     <div class="container">
         <div class="logo">
             <h1>CNR Todo</h1>

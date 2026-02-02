@@ -53,7 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#668dea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Registrierung - CNR Todo</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" href="assets/img/todo_icon.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/todo_icon.png">
@@ -61,8 +65,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<link rel="apple-touch-icon" sizes="167x167" href="assets/img/todo_icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/todo_icon.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/todo_icon.png">
+=======
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="image/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="image/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="image/todo_icon.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="image/todo_icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="image/todo_icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="image/todo_icon.png">
+>>>>>>> origin/main
 </head>
 <body>
+    <div class="ios-status-bar"></div>
     <div class="container">
         <div class="logo">
             <h1>CNR Todo</h1>
