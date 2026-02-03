@@ -61,30 +61,6 @@ define('DB_PASS', '');            // Ihr MySQL-Passwort
 2. Öffnen Sie Ihren Browser
 3. Navigieren Sie zu: `http://localhost/canerin-todo/`
 
-## Projektstruktur
-
-```
-CNR_ToDo/
-├── index.php                  - Startseite (leitet zu login.php weiter)
-├── login.php                  - Anmeldeseite
-├── register.php               - Registrierungsseite
-├── dashboard.php              - Hauptseite mit Todo-Liste
-├── logout.php                 - Abmelden
-├── todo_actions.php           - CRUD-Operationen für Todos
-├── license.txt                - Lizenzdatei
-├── README.md                  - Diese Datei
-├── core/
-│   ├── config.php             - Datenbankkonfiguration und Hilfsfunktionen
-│   └── database.sql           - Datenbank-Setup-Script
-├── css/
-│   └── style.css              - Alle Styles (responsive Design)
-├── js/
-│   └── main.js                - JavaScript Funktionen
-├── assets/                    - Assets und Ressourcen
-│   └── img/                   - Bilder für README und Dokumentation
-└── .git/                      - Git-Repository
-```
-
 ## DB Design
 
 ![1769601893823](assets/img/README/1769601893823.png)
