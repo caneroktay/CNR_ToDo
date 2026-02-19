@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $fehler = 'Ungültiger Benutzername oder Passwort.';
             }
         } catch (PDOException $e) {
-            $fehler = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
+            $fehler = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut..';
         }
     }
 }
