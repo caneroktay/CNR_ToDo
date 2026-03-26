@@ -77,8 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="text" 
                     id="benutzername" 
                     name="benutzername" 
-                    onfocus="changeAvatar('image/unten.png')"
-                    onblur="changeAvatar('image/normal.png')"
+                    onfocus="changeAvatar('assets/img/unten.png')"
+                    onblur="changeAvatar('assets/img/normal.png')"
                     value="<?php echo htmlspecialchars($_POST['benutzername'] ?? ''); ?>"
                     required
                     placeholder="Ihr Benutzername oder E-Mail"
@@ -90,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="password" 
                     id="passwort" 
                     name="passwort" 
-                    onfocus="changeAvatar('image/passwort.png')"
-                    onblur="changeAvatar('image/normal.png')"
+                    onfocus="changeAvatar('assets/img/passwort.png')"
+                    onblur="changeAvatar('assets/img/normal.png')"
                     required
                     placeholder="Ihr Passwort"
                 >
