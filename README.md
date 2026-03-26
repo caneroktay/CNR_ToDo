@@ -83,7 +83,7 @@ define('DB_PASS', '');            	// Ihr MySQL-Passwort
 define('DB_HOST', 'db');         	// 'db' ist der Servicename im Docker-Netzwerk
 define('DB_NAME', 'canerin_todo');
 define('DB_USER', 'root');
-define('DB_PASS', 'root');       	// Docker-Passwort ist 'root'
+define('DB_PASS', 'root');       	// Docker-Passwort 'root' oder Ihr Password
 
 ```
 
