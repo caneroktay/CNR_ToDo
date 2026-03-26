@@ -14,12 +14,10 @@ Diese Webanwendung ist eine funktionale „To-Do-Liste“, die grundlegende **CR
 
 ## Voraussetzungen
 
-- PHP 7.4 oder höher
-- MariaDB/MySQL 5.7 oder höher
-- Apache/Nginx Webserver
-- XAMPP, WAMP, MAMP oder ähnliche lokale Entwicklungsumgebung
+* **Option A (klassisch):** XAMPP, WAMP veya MAMP (PHP 7.4+, MariaDB 5.7+)
+* **Option B (Modern):** Docker & Docker Compose
 
-## Installation
+## Lokale Installation
 
 ### 1. Dateien einrichten
 
@@ -29,7 +27,25 @@ Kopieren Sie alle Projektdateien in Ihr lokales Webserver-Verzeichnis:
 - Bei WAMP: `C:\wamp64\www\canerin-todo\`
 - Bei MAMP: `/Applications/MAMP/htdocs/canerin-todo/`
 
-### 2. Datenbank erstellen
+**Bei Docker :**
+
+1. Erstellen Sie ein Projektverzeichnis: `~/Desktop/meinProjekt`
+2. Kopieren Sie die PHP-Dateien in den Unterordner `./www/`
+3. Stellen Sie sicher, dass die Dateien `docker-compose.yml` und `Dockerfile` im Hauptverzeichnis liegen.
+
+### 2. Docker Setup (Nur für Docker-Nutzer)
+
+Falls Sie Docker verwenden, führen Sie im Terminal folgenden Befehl aus:
+
+**Bash**
+
+```
+docker compose up -d --build
+```
+
+> **Hinweis:** Dies startet automatisch den Apache-Server (Port 8080) und die MariaDB-Datenbank (Port 3306).
+
+### 3. Datenbank erstellen
 
 **Option A: Mit phpMyAdmin**
 
@@ -38,28 +54,59 @@ Kopieren Sie alle Projektdateien in Ihr lokales Webserver-Verzeichnis:
 3. Kopieren Sie den gesamten Inhalt der Datei `database.sql`
 4. Fügen Sie ihn in das SQL-Feld ein und klicken Sie auf "OK"
 
-**Option B: Mit MySQL-Kommandozeile**
+ **Mit MySQL-Kommandozeile**
 
 ```bash
 mysql -u root -p < database.sql
 ```
 
-### 3. Datenbankkonfiguration anpassen (falls nötig)
+**Option B: Über Docker Terminal (Schnellimport)**
 
-Öffnen Sie die Datei `config.php` und passen Sie bei Bedarf die Datenbankzugangsdaten an:
+**Bash**
 
-```php
-define('DB_HOST', 'localhost');   // oder 'localhost:3306' oder ihr Port
-define('DB_NAME', 'canerin_todo');
-define('DB_USER', 'root');        // Ihr MySQL-Benutzername
-define('DB_PASS', '');            // Ihr MySQL-Passwort
+```
+docker exec -i mariadb_database mysql -u root -proot canerin_todo < database.sql
 ```
 
-### 4. Anwendung starten
+### 4. Datenbankkonfiguration anpassen (falls nötig)
+
+Passen Sie die Zugangsdaten in der  `core/config.php` an, je nachdem, welche Umgebung Sie nutzen:
+
+```php
+// Option A: --- FÜR XAMMP ---
+define('DB_HOST', 'localhost');   	// oder 'localhost:3306' oder ihr Port ()
+define('DB_NAME', 'canerin_todo');
+define('DB_USER', 'root');        	// Ihr MySQL-Benutzername
+define('DB_PASS', '');            	// Ihr MySQL-Passwort
+
+// Option B: --- FÜR DOCKER ---
+define('DB_HOST', 'db');         	// 'db' ist der Servicename im Docker-Netzwerk
+define('DB_NAME', 'canerin_todo');
+define('DB_USER', 'root');
+define('DB_PASS', 'root');       	// Docker-Passwort ist 'root'
+
+```
+
+### 5. Anwendung starten
 
 1. Starten Sie Ihren lokalen Webserver (Apache) und MySQL/MariaDB
 2. Öffnen Sie Ihren Browser
-3. Navigieren Sie zu: `http://localhost/canerin-todo/`
+   * **XAMPP:**`http://localhost/canerin-todo/`
+   * **Docker:**`http://localhost:8080/`
+
+
+## Fehlerbehebung (Docker Linux)
+
+Falls Sie Berechtigungsprobleme im Ihren Ordnern haben:
+
+**Bash**
+
+```
+sudo chown -R $USER:$USER .
+chmod -R 755 .
+```
+
+---
 
 ## DB Design
 
