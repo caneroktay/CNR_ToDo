@@ -65,7 +65,7 @@ mysql -u root -p < database.sql
 **Bash**
 
 ```
-docker exec -i mariadb_database mysql -u root -proot canerin_todo < database.sql
+docker exec -i todo_db_container mysql -u root -proot canerin_todo < database.sql
 ```
 
 ### 4. Datenbankkonfiguration anpassen (falls nötig)
@@ -93,7 +93,6 @@ define('DB_PASS', 'root');       	// Docker-Passwort 'root' oder Ihr Password
 2. Öffnen Sie Ihren Browser
    * **XAMPP:**`http://localhost/canerin-todo/`
    * **Docker:**`http://localhost:8080/`
-
 
 ## Fehlerbehebung (Docker Linux)
 

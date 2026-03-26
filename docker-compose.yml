@@ -1,18 +1,24 @@
 services:
   db:
     image: mariadb:latest
+    container_name: todo_db_container 
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: canerin_todo
     ports:
       - "3306:3306"
+    volumes:
+      - todo_db_data:/var/lib/mysql
 
   php:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    build: .
+    container_name: todo_app_container 
     restart: always
     ports:
       - "8080:80"
     volumes:
       - ./:/var/www/html
+
+volumes:
+  todo_db_data: 
